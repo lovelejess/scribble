@@ -1,19 +1,29 @@
 # ----------- CONFIGURABLE START -----------
-title:            "Scribble"
-description:      "Such theme, very cool."
-url:              http://scribble.muan.co # Site url, without a slash at the end.
-signoff:          "muan" # Your name
-facebook_appid:   # APP ID for like button, remove from /_includes/share.html if unwanted.
-google_analytics: # Set tracking, remove from /javascripts/basic.js if unwanted.
-share:            false # Turn on twitter and facebook share buttons
+title:            lovelejess
+description:      decide who you want to be and go be it.
+url:              "http://lovelejess.github.io/"
+signoff:          lovelejess
+baseurl:          ""
+disqus_shortname: # disqus comment thread for post header options. ( leave blank if unwanted. )
+facebook_appid:   # appid for like button, remove from /_includes/share.html if unwanted.
+google_analytics: UA-49936424-2
 
 links:
-  - name:         Posts
-    url:          /
-    external:     false
-  - name:         About me
+  - name:         About
     url:          /about
-    external:     false
+  - name:         Blog
+    url:          /post
+  - name:         Twitter
+    url:          https://www.twitter.com/lovelejess
+    external:     true
+  - name:         LinkedIn
+    url:          https://www.linkedin.com/in/lejessica
+    external:     true
+  - name:         GitHub
+    url:          http://github.com/lovelejess
+    external:     true
+  - name:         Email
+    url:          mailto:jessicaduongle@gmail.com  
 # ------------ CONFIGURABLE END ------------
 
 permalink:        /posts/:title
