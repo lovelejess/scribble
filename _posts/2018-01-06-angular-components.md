@@ -5,7 +5,7 @@ date: 2018-01-06 17:35:31
 
 > Currently enrolled in <a href="https://www.udemy.com/the-complete-guide-to-angular-2" target="_blank">Udemy's- the complete guide to angular 2.</a> Notes from Lesson 1 and 2
 
-[Link to Assignment 1 - Components](https://github.com/lovelejess/angular-udemy/tree/master/basics-assignment-1-start)
+<a href="https://github.com/lovelejess/angular-udemy/tree/master/basics-assignment-1-start" target="_blank">Link to Assignment 2 - Databinding</a>
 
 ### How Does an Angular App Get Loaded and Started? (Lecture 13)
 - Import main module (`app.module.ts`) into main.ts
