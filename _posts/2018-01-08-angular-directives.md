@@ -61,7 +61,7 @@ date: 2018-01-08 17:45:10
 
 - directive that displays an iterable data structure.
 - remember to use the `let oneItem of iterable` syntax!
-- remember to use a directive that can render iterables e.g. `<li></li>`.
+- remember to use an HTML tag that can render iterables e.g. `<li></li>`.
   - `<p></p>` doesn't work
 
 `<li *ngFor="let item of items"></li>`
