@@ -1,6 +1,6 @@
 ---
 title: angular databinding
-date: 2018-01-07 15:35:40:31
+date: 2018-01-07 19:35:31
 ---
 
 > Currently enrolled in <a href="https://www.udemy.com/the-complete-guide-to-angular-2" target="_blank">Udemy's- the complete guide to angular 2.</a> Notes from Lesson 1 and 2
