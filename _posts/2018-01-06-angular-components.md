@@ -33,7 +33,9 @@ date: 2018-01-06 17:35:31
 ```
 
 **Attribute Selector** 
-- can use any html attribute selector
+- can use any html element
+- in the angular component, the selector is denoted by the `[]`
+- in the html, the selector is preceeded by a html element 
 
 ```
 # app.component.ts
@@ -49,6 +51,8 @@ date: 2018-01-06 17:35:31
 ```
 
 **Class Selector** 
+- in the angular component, the selector is denoted by the `.`
+- in the html, the selector is preceeded by the html class tag
 
 ```
 # app.component.ts
