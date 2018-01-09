@@ -11,9 +11,7 @@ date: 2018-01-07 19:35:31
 
 ### Output Data to Browser:
 
-> legend: Typescript = HTML
-
-- String Interpolation 
+- **String Interpolation**
 
   {% raw %}
   `{{ data }}`
@@ -22,26 +20,26 @@ date: 2018-01-07 19:35:31
   - Example: 
 
     {% raw %}
-    `<p>{{ allowNewServer }}</p>`
+    `<p>{{ propertyText }}</p>`
     {% endraw %}
 
-- Property Binding
+- **Property Binding**
 
   `[html property] = "data"`
 
   - Example: 
     ```
     # html inner text
-    <p [innerText]="allowNewServer"></p>
+    <p [innerText]="myElement"></p>
     
     # button example
     <button class="btn btn-primary" 
-    [disabled]="!allowNewServer">Add Server</button>
+    [disabled]="conditionalBoolean">Add Server</button>
     ```
 
 ### React to User Events from Browser
 
-- Event Binding
+- **Event Binding**
 
   `(event) = "expression"`
   
@@ -49,14 +47,14 @@ date: 2018-01-07 19:35:31
     ```
     # button example
     <button class="btn btn-primary" 
-    [disabled]="!allowNewServer"
-    (click)="onCreateServer()">Add Server</button>
+    [disabled]="conditionalBoolean"
+    (click)="onMethodEvent()">Add Server</button>
 
     # input example
     <input
     type="text"
     class="form-control"
-    (input)="onUpdateServerName($event)">
+    (input)="onMethodEvent($event)">
     ```
   
 
@@ -69,5 +67,5 @@ date: 2018-01-07 19:35:31
     <input
     type="text"
     class="form-control"
-    [(ngModel)]="serverName">
+    [(ngModel)]="propertyName">
     ```

@@ -29,29 +29,32 @@ date: 2018-01-08 17:45:10
 - `*ngIf` else
     -  can use the `ng-template` directive with a marker for `else` conditions
 
+- Example:
  {% raw %}
-```
-<p *ngIf="conditional expression; else markerThatMatchesngTemplate">I satisfied the if statement</p>
-{% endraw %}
+  ```
+  <p *ngIf="conditional expression; 
+  else markerThatMatchesngTemplate">
+  I satisfied the if statement</p>
+  {% endraw %}
 
-<ng-template #markerThatMatchesngTemplate>
-  <p>I satisfy the else statement</p>
-```
+  <ng-template #markerThatMatchesngTemplate>
+    <p>I satisfy the else statement</p>
+  ```
 
 ### Attribute Directives
 
 - **attribute directives** only change the element that they were placed on. They don't add or remove elements, unlike structural directives.
 
 
-### ngStyle && ngClass
+### ngStyle & ngClass
 
 - directives that allow you to set CSS styling on an HTML element conditionally.
-- *NOTE* 
-  - for class name syntax:
+- **NOTE:** 
+  - for class name (`ngClass`):
     - single quotes for dash syntax
-      - `[ngClass]="{'css-class': conditionExpressionOrMethod}"`
+      - `[ngClass]="{'css-class': conditionExpressionOrMethod()}"`
     - camel case
-      - `[ngClass]="{cssClass: conditionExpressionOrMethod}"`
+      - `[ngClass]="{cssClass: conditionExpressionOrMethod()}"`
 
 - Example: 
 
@@ -59,7 +62,7 @@ date: 2018-01-08 17:45:10
   ```
   <p 
    [ngStyle]="{cssStyle: conditonalMethod()}"
-   [ngClass]="{cssClass: conditionExpressionOrMethod}"> 
+   [ngClass]="{cssClass: conditionExpressionOrMethod()}"> 
    This text will be styled according to the above expressions
   </p>
   ```
