@@ -46,6 +46,14 @@ date: 2018-01-08 17:45:10
 ### ngStyle && ngClass
 
 - directives that allow you to set CSS styling on an HTML element conditionally.
+- *NOTE* 
+  - for class name syntax:
+    - single quotes for dash syntax
+      - `[ngClass]="{'css-class': conditionExpressionOrMethod}"`
+    - camel case
+      - `[ngClass]="{cssClass: conditionExpressionOrMethod}"`
+
+- Example: 
 
  {% raw %}
   ```
