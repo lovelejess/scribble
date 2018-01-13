@@ -16,7 +16,7 @@ date: 2018-01-08 17:45:10
 ### Structural Directives
 
 - annotated by the *
-- `ngIf` and `ngFor` are most commonly used
+- `*ngIf` and `*ngFor` are most commonly used
 
 - Example:
 
@@ -72,7 +72,6 @@ date: 2018-01-08 17:45:10
 
 - directive that displays an iterable data structure.
 - remember to use the `let oneItem of iterable` syntax!
-- remember to use an HTML tag that can render iterables e.g. `<li></li>`.
-  - `<p></p>` doesn't work
-
-`<li *ngFor="let item of items"></li>`
+ {% raw %}
+`<p *ngFor="let item of items">{{ item.name }}</p>`
+ {% endraw %}
