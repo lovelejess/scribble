@@ -7,7 +7,7 @@ date: 2018-01-21 11:40:06
 
 ## Local Variables in Templates
 - Can use named variables in templates via `#` prefix. The variable will only exist in the scope of anywhere after the variable has been defined in the template.
-- for example: 
+- **for example:** 
   - instead of declaring an `ngModel` and declaring a property for that component, you can use a **locally referenced template variable** (first example)
   - in the .html file, the `#serverNameInput` variable defined in the input form is passed in to the `click` event's method `onAddServer()` (second example)
   - in the .ts file, the `onAddServer` is able to access that `HTMLInputElement` and retrieve that value of the variable that was passed in.
@@ -77,7 +77,7 @@ date: 2018-01-21 11:40:06
 
 ## Accessing Template Variables via @ViewChild
 - Can store the value of the template variables in your typescript file by using the decorator `@ViewChild()`
-- Make sure that you don't modify the value of this variable in your .ts file because that violates separation of concerns, and cause unwanted behavior.
+- Make sure that you don't modify the value of this variable in your .ts file because that violates separation of concerns and cause unwanted behavior.
 
 
   **server.component.html**
@@ -116,8 +116,7 @@ date: 2018-01-21 11:40:06
 ## Content Project via ng-content
 - While property binding is great for simple html properties, it's not great for complext html rendering and reusbility. 
 - Content projection allows for component resuability by placing the `<ng-content>` directive as a placeholder.
-- For example, if you wanted to reuse 
-
+- For example, if you wanted to resuse `servers.component.ts` because you want to render it's information in different views, then you can use content projection
 
   **servers.component.ts**
 
