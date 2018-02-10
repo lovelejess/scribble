@@ -26,13 +26,13 @@ date: 2018-02-03 10:57:06
         constructor(private elementRef: ElementRef, private renderer: Renderer2) { }
 
         @HostListener('mouseenter') mouseover(eventData: Event) {
-            below line does the same as the next, but manipulates the DOM via renderer which is not ideal. 
+            //below line does the same as the next, but manipulates the DOM via renderer which is not ideal. 
             this.renderer.setStyle(this.elementRef.nativeElement, 'background-color', 'blue');
             this.backgroundColor = 'blue';
         }
 
         @HostListener('mouseleave') mouseleave(eventData: Event) {
-             below line does the same as the next, but manipulates the DOM via renderer which is not ideal.
+             //below line does the same as the next, but manipulates the DOM via renderer which is not ideal.
             this.renderer.setStyle(this.elementRef.nativeElement, 'background-color', 'transparent'); 
             this.backgroundColor = 'transparent';
         }
