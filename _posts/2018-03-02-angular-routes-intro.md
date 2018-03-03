@@ -27,8 +27,9 @@ date: 2018-03-02 09:06:25
 
 ### Angular Routes Consumption
 - add the `<router-outlet></router-outlet>` as a placeholder for your routers component
-- add the `routerLink` attribute and set it to one of the routes defined in `app.module.ts`
-
+- add the `routerLink` property and set it to one of the routes defined in `app.module.ts`
+    - can pass parameters to the `routerLink` property by:
+        `<a [routerLink]="['/users', 3, 'Anna']">Example for /users/:id/:name</a>`
 
 - **app.component.html**
 
