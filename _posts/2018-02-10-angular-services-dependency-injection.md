@@ -1,6 +1,6 @@
 ---
 title: angular services and dependency injection
-date: 2018-02-10 02:06:25
+date: 2018-02-10 14:06:25
 ---
 
 ### Angular Services
