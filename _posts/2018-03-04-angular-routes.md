@@ -1,6 +1,6 @@
 ---
 title: angular routes query parameterization
-date: 2018-03-03 14:00:43
+date: 2018-03-04 21:23:04
 ---
 
 ### Angular Query Parameters
