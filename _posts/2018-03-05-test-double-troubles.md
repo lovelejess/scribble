@@ -2,9 +2,8 @@
 title: TEST DOUBLE TROUBLES
 date: 2018-03-05 21:24:43
 ---
-# TEST DOUBLE TROUBLES
 
-https://8thlight.com/blog/uncle-bob/2014/05/14/TheLittleMocker.html
+[Notes from Uncle Bob](https://8thlight.com/blog/uncle-bob/2014/05/14/TheLittleMocker.html)
 
 ## Dummy
 - Returns null 
@@ -36,4 +35,4 @@ https://8thlight.com/blog/uncle-bob/2014/05/14/TheLittleMocker.html
 
 "Mock is a kind of spy, a spy is a kind of stub, and a stub is a kind of dummy. But a fake isn't a kind of any of them. It's a completely different kind of test double."
 
-Uncle Bob almost always uses stubs and spies since they are very easy to write 
+Uncle Bob almost always uses stubs and spies since they are very easy to write!
