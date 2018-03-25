@@ -1,13 +1,13 @@
 ---
-title: Angular Observables
-date: 2018-03-24 17:08:43
+title: angular observables
+date: 2018-03-25 11:56:43
 ---
 
 ## What is an Observable?
 - an **observable** a function that handles a set of values represented over time
 - an **observer** is an object that the observable uses to perform actions on the data set based on whether the event is **next**, **complete**, or **error**.
 
-- related: [observables vs promises](./2018-01-31-promises-observables.md) 
+- related: [observables vs promises](promises-observables) 
 
     ```
     const myObservable: Observable<string> = Observable.create((observer: Observer<string>) => {
