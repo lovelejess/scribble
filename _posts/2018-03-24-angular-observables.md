@@ -1,6 +1,6 @@
 ---
 title: angular observables
-date: 2018-03-25 11:56:43
+date: 2018-03-24 17:03:43
 ---
 
 ## What is an Observable?
