@@ -1,5 +1,5 @@
 ---
-title: TEST DOUBLE TROUBLES
+title: test double troubles
 date: 2018-03-05 21:24:43
 ---
 
