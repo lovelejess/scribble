@@ -76,4 +76,62 @@ date: 2018-03-25 11:56:43
     second package
     error
     ```
-* the `observer.error()` function will terminate and error out the subscription to the observable, therefore the 'third package' console log will never get executed. 
+* the `observer.error()` function will terminate and error out the subscription to the observable, therefore the 'third package' console log will never get executed.
+
+
+### Subscribing and Unsubscribing
+* **Subscribing** to an observable lasts for its entire lifetime. the below code snippet will cause a memory leak by continuously console logging "2 seconds has passed" every two seconds for the entire lifetime of the application.
+* **example:**
+
+    ```
+        export class HomeComponent implements OnInit{
+            private numbersSubscription: Subscription;
+
+        constructor() { }
+
+        ngOnInit(): void {
+            const myObservable: Observable<string> = Observable
+            .create((observer: Observer<string>) => {
+                setInterval(() => {
+                    observer.next('2 seconds has passed');
+                }, 2000);
+            });
+
+            this.numbersSubscription = myObservable.subscribe(
+                (data: string) => { console.log(data);},
+                (error: string) => { console.log(error);},
+                () => { console.log('completed');},
+            );
+        }
+    }
+    ```
+
+* In order to prevent this, you can **unsubscribe** to your observable to terminate its subscription.
+* **example:**
+
+    ```
+        export class HomeComponent implements OnInit, OnDestroy {
+            private numbersSubscription: Subscription;
+
+        constructor() { }
+
+        ngOnInit(): void {
+            const myObservable: Observable<string> = Observable
+            .create((observer: Observer<string>) => {
+                setInterval(() => {
+                    observer.next('2 seconds has passed');
+                }, 2000);
+            });
+
+            this.numbersSubscription = myObservable.subscribe(
+                (data: string) => { console.log(data);},
+                (error: string) => { console.log(error);},
+                () => { console.log('completed');},
+            );
+        }
+
+        ngOnDestroy(): void {
+            this.numbersSubscription.unsubscribe();
+        }
+    }
+    ```
