@@ -8,7 +8,7 @@ date: 2018-04-14 14:43:02
   * **Template-Driven**
     - angular infers the Form Object from the DOM
   * **Reactive**
-    - Form is created programmatically and syncrhonized with the DOM
+    - Form is created programmatically and synchronized with the DOM
 
 
 ## Template-Driven Approach
@@ -152,5 +152,57 @@ date: 2018-04-14 14:43:02
   ```
     input.ng-invalid.ng-touched {
       border: 1px solid red;
+    }
+  ```
+
+## Error Messages for Form Validation
+- bind to the `ngModel` via template binding:
+
+- the below code will add a 'Please enter valid email' message right below the input box if the email is invalid and the input box has been touched.
+
+- **app.component.html**
+  ```
+    <div class="form-group">
+      <label for="email">Mail</label>
+      <input
+            type="email"
+            id="email"
+            class="form-control"
+            ngModel
+            name="email"
+            required
+            #email="ngModel"
+      >
+      <span class="help-block"
+            *ngIf="!email.valid && email.touched">
+            Please enter valid email!
+      </span>
+    </div>
+  ```
+
+## Default Values in Forms
+- property bind to `ngModel` and add a `name` attribute
+
+- **app.component.html**
+
+  ```
+    <div class="form-group">
+        <label for="secret">Secret Questions</label>
+        <select
+              id="secret"
+              class="form-control"
+              [ngModel]="defaultQuestion"
+              name="secret">
+          <option value="pet">Your first Pet?</option>
+          <option value="teacher">Your first teacher?</option>
+        </select>
+    </div>
+  ```
+
+- **app.component.ts**
+
+  ```
+    export class AppComponent {
+      public defaultQuestion: String = "teacher";
     }
   ```
