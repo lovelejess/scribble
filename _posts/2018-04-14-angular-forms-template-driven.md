@@ -112,6 +112,10 @@ date: 2018-04-14 14:43:02
     }
   ```
 
+- The above code generates this:
+
+![sample image](../images/template-driven-forms.png)
+
 
 ## Form Validation
 - **required** input
@@ -155,7 +159,13 @@ date: 2018-04-14 14:43:02
     }
   ```
 
-## Error Messages for Form Validation
+- The above code generates this:
+
+![sample image](../images/template-driven-form-validation.png)
+
+
+
+## Error Messages for Form Validation: One Way Binding
 - bind to the `ngModel` via template binding:
 
 - the below code will add a 'Please enter valid email' message right below the input box if the email is invalid and the input box has been touched.
@@ -179,6 +189,10 @@ date: 2018-04-14 14:43:02
       </span>
     </div>
   ```
+
+- The above code generates this:
+  ![sample image](../images/form-validation-email-error-message.png)
+
 
 ## Default Values in Forms
 - property bind to `ngModel` and add a `name` attribute
@@ -206,3 +220,44 @@ date: 2018-04-14 14:43:02
       public defaultQuestion: String = "teacher";
     }
   ```
+
+## Form Validation: Two Way Binding
+- use two way binding to bind to the input answers
+
+- **app.component.html**
+  ```
+    <div class="form-group">
+      <label for="secret">Secret Questions</label>
+      <select
+            id="secret"
+            class="form-control"
+            [ngModel]="defaultQuestion"
+            name="secret">
+        <option value="pet">Your first Pet?</option>
+        <option value="teacher">Your first teacher?</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <textarea
+        name="questionAnswer"
+        rows="3"
+        class="form-control"
+        [(ngModel)]="questionAnswer">
+      </textarea>
+    </div>
+
+    <p>Your reply: {{ questionAnswer }} </p>
+  ```
+
+- **app.component.ts**
+
+  ```
+    export class AppComponent {
+      public questionAnswer: String = "";
+    }
+
+  ```
+- The above code generates this:
+
+![sample image](../images/two-way-binding-forms-template-driven.png)
