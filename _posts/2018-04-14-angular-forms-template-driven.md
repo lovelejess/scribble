@@ -62,3 +62,52 @@ date: 2018-04-14 14:43:02
       }
     }
   ```
+
+- or can use the `@ViewChild()` way:
+
+- **app.component.html**
+    ```
+      <div class="container">
+        <div class="row">
+          <form (ngSubmit)="onSubmit()" #userNameForm="ngForm">
+            <div id="user-data">
+              <div class="form-group">
+                <label for="username">Username</label>
+                <input
+                      type="text"
+                      id="username"
+                      class="form-control"
+                      ngModel
+                      name="username"
+                >
+              </div>
+            <button class="btn btn-primary" type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+    ```
+
+- **app.component.ts**
+
+  ```
+    import { Component } from '@angular/core';
+    import { NgForm } from '@angular/forms';
+
+    @Component({
+      selector: 'app-root',
+      templateUrl: './app.component.html',
+      styleUrls: ['./app.component.css']
+    })
+
+    export class AppComponent {
+       @ViewChild('userNameForm') signupForm: NgForm;
+
+      public suggestUserName() {
+        const suggestedName = 'Superuser';
+      }
+
+      public onSubmit() {
+        console.log(this.signupForm);
+      }
+    }
+  ```
