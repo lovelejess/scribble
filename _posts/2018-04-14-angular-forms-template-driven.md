@@ -111,3 +111,46 @@ date: 2018-04-14 14:43:02
       }
     }
   ```
+
+
+## Form Validation
+- **required** input
+  - invalidates form if input is missing
+  - use keyword `required`
+
+- **app.component.html**
+  ```
+    <div class="container">
+      <div class="row">
+        <form (ngSubmit)="onSubmit()" #userNameForm="ngForm">
+          <div id="user-data">
+            <div class="form-group">
+              <label for="username">Username</label>
+              <input
+                    type="text"
+                    id="username"
+                    class="form-control"
+                    ngModel
+                    name="username"
+                    required
+              >
+            </div>
+          <button
+            class="btn btn-primary"
+            type="submit"
+            [disabled]="!userNameForm.valid"
+            [ngClass]="{ 'input.ng-invalid' : !userNameForm.valid }">
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+  ```
+- the `ngClass` styling above adds a red border around the invalid input boxes after they have been touched
+
+- **app.component.css**
+  ```
+    input.ng-invalid.ng-touched {
+      border: 1px solid red;
+    }
+  ```
