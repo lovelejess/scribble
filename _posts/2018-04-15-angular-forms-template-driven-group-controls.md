@@ -8,7 +8,7 @@ date: 2018-04-15 12:34:02
   - add `ngModelGroup` directive to your form's div and assign it a name for the subgroup's key.
     - for example, the below snippet's subgroup name is "userData"
 
-  - can export the directive into a local template variable using `#mySubGroupName=ngModelGroup`
+  - can export the directive into a local template variable using `#mySubGroupName="ngModelGroup"`
 
     ```
       <form 
