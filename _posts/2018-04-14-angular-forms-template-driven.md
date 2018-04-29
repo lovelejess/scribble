@@ -12,32 +12,35 @@ date: 2018-04-14 14:43:02
 
 
 ## Template-Driven Approach
-
+- use the Angular directive, `<form></form>
+- 
 - **app.component.html**
-
-  -  `(ngSubmit)="onSubmit(userNameForm) #userNameForm="ngForm"`
+  - form submission: 
     - `onSubmit` is method that is invoked when the event for `ngSubmit` is emitted (form is submitted)
-    - `#userNameForm` binds to `ngForm` and is passed into the `onSubmit` method so that the method has access to the `ngForm` 
+      - Template Variable Example:  
+        - `(ngSubmit)="onSubmit(subscriptionForm) #subscriptionForm="ngForm"`
+    - `#subscriptionForm` binds to `ngForm` and is passed into the `onSubmit` method so that the method has access to the `ngForm` 
   
     ```
-      <div class="container">
-        <div class="row">
-          <form (ngSubmit)="onSubmit(userNameForm)" #userNameForm="ngForm">
-            <div id="user-data">
-              <div class="form-group">
-                <label for="username">Username</label>
-                <input
-                      type="text"
-                      id="username"
-                      class="form-control"
-                      ngModel
-                      name="username"
-                >
-              </div>
-            <button class="btn btn-primary" type="submit">Submit</button>
-          </form>
+      <form (ngSubmit)="onSubmit(userNameForm)" #userNameForm="ngForm">
+        <div class="form-group">
+          <label for="userNameInput">Username</label>
+          <input 
+                  type="text"
+                  id="username"
+                  class="form-control"
+                  ngModel
+                  name="username"
+                  required
+                  >
         </div>
-      </div>
+        <button 
+              class="btn btn-primary"
+              type="submit"
+              [disabled]="userNameForm.invalid"
+        > Submit
+        </button>
+      </form>
     ```
 
 - **app.component.ts**
@@ -52,13 +55,8 @@ date: 2018-04-14 14:43:02
       styleUrls: ['./app.component.css']
     })
     export class AppComponent {
-      public suggestUserName() {
-        const suggestedName = 'Superuser';
-      }
-
-      public onSubmit(form: NgForm) {
-        console.log("submitted")
-        console.log(form)
+      public onSubmit(userNameForm: NgForm): void {
+        console.log(`form: ${userNameForm.value.username}`);
       }
     }
   ```
@@ -67,24 +65,25 @@ date: 2018-04-14 14:43:02
 
 - **app.component.html**
     ```
-      <div class="container">
-        <div class="row">
-          <form (ngSubmit)="onSubmit()" #userNameForm="ngForm">
-            <div id="user-data">
-              <div class="form-group">
-                <label for="username">Username</label>
-                <input
-                      type="text"
-                      id="username"
-                      class="form-control"
-                      ngModel
-                      name="username"
-                >
-              </div>
-            <button class="btn btn-primary" type="submit">Submit</button>
-          </form>
+      <form (ngSubmit)="onSubmit()" #userNameForm="ngForm">
+        <div class="form-group">
+          <label for="userNameInput">Username</label>
+          <input 
+                  type="text"
+                  id="username"
+                  class="form-control"
+                  ngModel
+                  name="username"
+                  required
+                  >
         </div>
-      </div>
+        <button 
+              class="btn btn-primary"
+              type="submit"
+              [disabled]="userNameForm.invalid"
+        > Submit
+        </button>
+      </form>
     ```
 
 - **app.component.ts**
@@ -100,14 +99,10 @@ date: 2018-04-14 14:43:02
     })
 
     export class AppComponent {
-       @ViewChild('userNameForm') signupForm: NgForm;
-
-      public suggestUserName() {
-        const suggestedName = 'Superuser';
-      }
+      @ViewChild('userNameForm') userNameForm: NgForm;
 
       public onSubmit() {
-        console.log(this.signupForm);
+        console.log(this.userNameForm.value.username);
       }
     }
   ```
@@ -124,31 +119,26 @@ date: 2018-04-14 14:43:02
 
 - **app.component.html**
   ```
-    <div class="container">
-      <div class="row">
-        <form (ngSubmit)="onSubmit()" #userNameForm="ngForm">
-          <div id="user-data">
-            <div class="form-group">
-              <label for="username">Username</label>
-              <input
-                    type="text"
-                    id="username"
-                    class="form-control"
-                    ngModel
-                    name="username"
-                    required
-              >
-            </div>
-          <button
-            class="btn btn-primary"
-            type="submit"
-            [disabled]="!userNameForm.valid"
-            [ngClass]="{ 'input.ng-invalid' : !userNameForm.valid }">
-            Submit
-          </button>
-        </form>
-      </div>
-    </div>
+   <form (ngSubmit)="onSubmit()" #userNameForm="ngForm">
+        <div class="form-group">
+          <label for="userNameInput">Username</label>
+          <input 
+                  type="text"
+                  id="username"
+                  class="form-control"
+                  ngModel
+                  name="username"
+                  required
+                  >
+        </div>
+        <button 
+              class="btn btn-primary"
+              type="submit"
+              [disabled]="userNameForm.invalid"
+              [ngClass]="{ 'input.ng-invalid' : !userNameForm.valid }">
+        > Submit
+        </button>
+      </form>
   ```
 - the `ngClass` styling above adds a red border around the invalid input boxes after they have been touched
 
@@ -172,6 +162,7 @@ date: 2018-04-14 14:43:02
 
 - **app.component.html**
   ```
+   <form (ngSubmit)="onSubmit()" #userNameForm="ngForm">
     <div class="form-group">
       <label for="email">Mail</label>
       <input
@@ -188,6 +179,7 @@ date: 2018-04-14 14:43:02
             Please enter valid email!
       </span>
     </div>
+  </form>
   ```
 
 - The above code generates this:

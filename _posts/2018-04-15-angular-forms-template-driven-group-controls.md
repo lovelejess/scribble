@@ -33,10 +33,10 @@ date: 2018-04-15 12:34:02
           >
         </div>
         <div class="form-group">
-            <label for="email">Mail</label>
-            <input
+            label for="emailInput">Email</label>
+          <input 
                   type="email"
-                  id="email"
+                  id="emailId"
                   class="form-control"
                   ngModel
                   name="email"
@@ -71,7 +71,7 @@ date: 2018-04-15 12:34:02
         <input
           type="radio"
           name="pronoun"
-          ng-model
+          ngModel
           [value]="pronoun"
           required
         >
