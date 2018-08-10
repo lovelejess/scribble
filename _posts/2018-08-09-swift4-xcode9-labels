@@ -1,0 +1,14 @@
+---
+title: "swift4 and xcode9 - labels"
+date: 2018-08-09 17:59:27
+---
+
+
+## Getting Started with Swift4 and Xcode 9 - Labels
+
+* Cool Tricks:
+  * Add a new line in a label by holding <option> key and <enter> in the xcode label editor!
+  * Edit sections of the label by doing the following:
+    * Text: Attributed
+    * Highlight the section of the label -> Edit the color, font, size, alignment, etc. 
+
