@@ -43,13 +43,13 @@ date: 2018-08-13 16:43:58
         
         func testAdd() {
             let result = calc.evaluate(op: "+", arg1: 2.0, arg2: 9.0)
-            XCTAssert(result == 11.0, "Error unable to add")
+            XCTAssert(result == 11.0, "Error: Add result does not equal 11.0")
         }
         
         func testClear() {
             let clearedResult = calc.clear()
-            XCTAssert(calc.result == 0.0 , "Error unable to clear")
-            XCTAssert(clearedResult == 0.0 , "Error unable to clear")
+            XCTAssert(calc.result == 0.0 , "Error: Clear result does not equal 0.0")
+            XCTAssert(clearedResult == 0.0 , "Error: Return clear result does not equal 11.0")
         }
         
     }
