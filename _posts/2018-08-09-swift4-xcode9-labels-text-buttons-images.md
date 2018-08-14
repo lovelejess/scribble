@@ -10,23 +10,28 @@ date: 2018-08-09 17:59:27
 
 ### Cool Tricks:
   * **Add a new line in a label** by holding *option* key and pressing *enter* key in the xcode label editor!
+
+  ![sample image](../images/add-new-line-labels.png)
+
   * **Edit sections of the label** by doing the following:
     * **Text:** Attributed
     * Highlight the section of the label -> Edit the color, font, size, alignment, etc. 
+
+  ![sample image](../images/edit-label-sections.png)
 
 ## Getting Started with Swift4 and Xcode 9: Interacting with Buttons
 
 * **Types of Connections:** 
   * **Outlet** 
-    * a @property
-    * Code -> User Interface
+    * @property
+    * Flow: Code -> User Interface
     * Used to change the content of a UI element with code
-    * for example: when a View Controller needs to set the text of a UILabel, it would do so through the outlet connection. 
+    * For example: when a View Controller needs to set the text of a UILabel, it would do so through the outlet connection.
   * **Action**
     * a function
-    * User Interface -> Code
+    * Flow: User Interface -> Code
     * Used to create some code that will run when a button is tapped
-    * trigged when the object on the user interface is pressed 
+    * Triggered when the object on the user interface is pressed
 
 ## Getting Started with Swift4 and Xcode 9: Images
 
