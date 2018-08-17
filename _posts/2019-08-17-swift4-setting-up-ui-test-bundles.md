@@ -39,3 +39,38 @@ date: 2018-08-17 13:49:43
 ![sample image](../images/ios-ui-test-failure-screenshot.png)
 
   * If you look closely, you can see that I wrote my expectation wrong. The result should be 10, and not 0 since `9 + 1 = 10`. Oops, let's change that to make our test pass!
+
+
+### Example Refactored UI Tests
+* It's best to refactor your UI Tests so that the shared components of your tests are only ran once. This will make the tests more performant and run faster!
+* Make sure that you set up your tests to the assumed starting position. For instance, I was testing the InfoViewController, and I just assumed that my test knew where to start, but it loaded at the calcuator view from the previous run. Therefore I needed to set up my test to start at InformationView. Sample code below:
+
+    ```
+    class InfoViewUITests: XCTestCase {
+        private var app: XCUIApplication!
+
+        override func setUp() {
+            super.setUp()
+            continueAfterFailure = false
+            // UI tests must launch the application that they test. 
+            // Doing this in setup will make sure it happens for each test method.
+            app = XCUIApplication()
+            app.launch()
+            
+            app.navigationBars["Master"].buttons["Menu"].tap()
+            app.tables.staticTexts["Information"].tap()
+        }
+        
+        override func tearDown() {
+            super.tearDown()
+        }
+        
+        func testExample() {
+            let informationNavigationBar = app.navigationBars["Information"]
+            
+            XCTAssertTrue(informationNavigationBar.otherElements["Information"].exists)
+            
+        }
+    }
+
+    ```
