@@ -42,6 +42,7 @@ date: 2018-04-01 17:20:30
 
     ```
 - **app.component.ts**
+  {% raw %}
     ```
         import { Component } from '@angular/core';
         import { OnInit } from '@angular/core/src/metadata/lifecycle_hooks';
@@ -79,6 +80,7 @@ date: 2018-04-01 17:20:30
 
         }
     ```
+    {% endraw %}
 
 ## Subject vs Observer vs Observable
 * an **observer** is an object that contains information on *how* to handle a data set.
