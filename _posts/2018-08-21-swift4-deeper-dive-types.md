@@ -1,5 +1,5 @@
 ---
-title: "swift4: deeper dive in swift"
+title: "swift4: deeper dive- types"
 date: 2018-08-21 10:36:42
 ---
 
@@ -32,6 +32,14 @@ date: 2018-08-21 10:36:42
   let myFloat1 = 9.02 
   print(String(myFloat1))
   ```
+* can explicity declare the types of variables
+  * helpful when you want to declare an array of doubles, but not give them decimal values
+    * e.g. 
+    ```
+    var myDouble: [Double] = [1,2,3]
+    //these are actually doubles [1.0, 2.0, 3.0]
+    ```
+
 
 ## Arrays
 * cool things to note:
