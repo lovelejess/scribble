@@ -15,24 +15,30 @@ date: 2018-08-21 14:56:30
 ### What's a Great Example of Where Optionals Occur?
   * a great example is using ui text fields because it is not always guaranteed that the user will enter a value. If you assume that the user will always input a value, the swift compiler will error.
 
-  * this will error out because we're assuming that the `inputNumber` has a `text` value
+  * this will error out because we're assuming that the `inputNumber` has a `text` value and then casting it to an Int
+  * the error you will see is: 
+  *Value of optional type 'String?' not unwrapped; did you mean to use '!' or '?'?*
   
     ``` 
-    @IBOutlet weak var inputNumber: UITextField!
-    if let inputNumberInt = Int(inputNumber.text) {
-                print("sum is: \(castedInputNumber + 100)")
-          }
-    }
+    @IBOutlet weak var myUITextField: UITextField!
+
+    @IBAction func myAction(_ sender: Any) {
+        if let inputNumber = Int(myUITextField.text) {
+            print("sum is: \(inputNumber + 100)")
+        }
     ```
 
 
-  * to fix this, use `if let` to check if the value exists before force casting it
+  * to fix this, use `if let` to check if the value exists before casting it to an Int
   
     ``` 
-    @IBOutlet weak var inputNumber: UITextField!
-    if let inputNumber = inputNumber.text {
-              if let castedInputNumber = Int(inputNumber) {
-                print("sum is: \(castedInputNumber + 100)")
-          }
+    @IBOutlet weak var myUITextField: UITextField!
+
+    if let inputText = myUITextField.text {
+      if let inputNumber = Int(inputText) {
+        print("sum is: \(inputNumber + 100)")
+      } else {
+        print("Oops no input text to sum")
+      }
     }
     ```
