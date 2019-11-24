@@ -39,8 +39,8 @@ thisIsAString = 0
 - All types are known at compile time
 
 ### Open Sourced
-- 
 
+- As of December 2015, Swift is open sourced!
 
 ### Ranges
 
