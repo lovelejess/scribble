@@ -1,5 +1,5 @@
 ---
-title: "application lifecycle"
+title: "iOS - application lifecycle"
 date: 2019-11-29 09:32:41
 ---
 
