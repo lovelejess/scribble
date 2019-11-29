@@ -1,6 +1,6 @@
 ---
 title: "application lifecycle"
-date: 2019-11-29 09:32:41s
+date: 2019-11-29 09:32:41
 ---
 
 ## Five States of Application Lifecycles
