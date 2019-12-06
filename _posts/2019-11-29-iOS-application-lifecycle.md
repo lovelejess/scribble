@@ -15,13 +15,13 @@ date: 2019-11-29 09:32:41
 
 ## ViewController Lifecycle
 
-```
-viewDidLoad()
-viewWillAppear()
-viewDidAppear()
-viewWillDisappear()
-viewDidDisappear()
-```
+    ```
+    viewDidLoad()
+    viewWillAppear()
+    viewDidAppear()
+    viewWillDisappear()
+    viewDidDisappear()
+    ```
 
 * `viewDidLoad`  - called when the view controller is created and loaded in memory. Usually called only once
 * `viewWillAppear` - called right before the content view is presented onscreen and before the content view is added to the view hierarchy
