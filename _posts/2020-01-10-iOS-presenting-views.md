@@ -14,7 +14,7 @@ date: 2020-01-10 21:33:46
     let viewController = storyboard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
     self.present(viewController, animated: true, completion: nil)
     ```
-    See [Example in Roshambo](https://github.com/lovelejess/ios-udacity-nanodegree/blob/master/Roshambo/Roshambo/RoshamboViewController.swift#L69)
+    See how the Rock View is presented in [Example in Roshambo](https://github.com/lovelejess/ios-udacity-nanodegree/blob/master/Roshambo/Roshambo/RoshamboViewController.swift#L69)
 
 ### Present Views Programmatically plus Segue
 
