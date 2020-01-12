@@ -6,6 +6,13 @@ date: 2020-01-10 18:39:44
 
 ### Simple TableViewController
 
+A **table view** contains groups of rows known as **table view cells** that display data on each of those individual rows. They can be used to display hierarchical data, which can be used in conjunction with **navigation views** to allow further digging.
+
+A **table view** has two delegates: `UITableViewDataSource` and  `UITableViewDelegate`. The `UITableViewDataSource` is used to manage the table view's data, whereas the `UITableViewDelegate` is used to manage interactions with the table view.
+
+Below is a simple example of creating a table view within a view controller.
+
+
 #### ViewController + UITableViewDataSource
     //
     //  ViewController.swift
