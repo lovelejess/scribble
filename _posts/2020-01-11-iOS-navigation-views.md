@@ -3,7 +3,7 @@ title: "iOS - navigation views"
 date: 2020-01-11 08:41:03
 ---
 
-### How to Create a Navigation View
+### How to Create a Navigation View via Storyboards
 
 1. Add a `UINavigationController` into the storyboard from the object library. 
     1. Make sure to set it as your Initial View Controller
