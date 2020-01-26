@@ -9,7 +9,7 @@ A **table view** has two delegates: `UITableViewDataSource` and  `UITableViewDel
 
 Below is a simple example of creating a table view within a view controller.
 
-### Simple TableViewController
+### How to Create a Table View via Storyboards
 
 #### ViewController + UITableViewDataSource
     //

@@ -3,7 +3,7 @@ title: "tech lead resources & tidbits"
 date: 2020-01-23 15:43:30
 ---
 
-A couple days ago I posted a tweet asking the twitterverse for suggestions on useful tidbits and resources on how to be a successful tech lead, and, W.O.W! Thank you to everyone for the overwhelmingly positive responses. I compiled a list of resources that everyone recommended including a few of my own. Here's the [tweet](https://twitter.com/lovelejess/status/1219996988751507456?s=20), if you're interested in reading the thread! Looking forward to referencing these resources as I embark on this exciting new journey!!
+A couple days ago I posted a tweet asking the twitterverse for suggestions on useful tidbits and resources on how to be a successful tech lead, and, WOW! Thank you to everyone for the overwhelmingly positive responses. I compiled a list of resources that everyone recommended including a few of my own. Here's the [tweet](https://twitter.com/lovelejess/status/1219996988751507456?s=20), if you're interested in reading the thread! Looking forward to referencing these resources as I embark on this exciting new journey!!
 
 ## Books
 
@@ -20,7 +20,12 @@ A couple days ago I posted a tweet asking the twitterverse for suggestions on us
 * [The Culture Code: The Secrets of Highly Successful Groups](https://www.goodreads.com/book/show/33517721-the-culture-code)
 * [The Manager's Path: A Guide for Tech Leaders Navigating Growth and Change](https://www.goodreads.com/book/show/33369254-the-manager-s-path)
 * [The Making of a Manager: What to Do When Everyone Looks to You](https://www.goodreads.com/book/show/38821039-the-making-of-a-manager)
-
+* [The Ideal Team Player: How to Recognize and Cultivate The Three Essential Virtues](https://www.goodreads.com/book/show/28930640-the-ideal-team-player)
+* [Crucial Conversations: Tools for Talking When Stakes Are High](https://www.goodreads.com/book/show/15014.Crucial_Conversations)
+* [The Coaching Habit](https://www.goodreads.com/book/show/29342515-the-coaching-habit)
+* [The Ultimate Sales Machine](https://www.goodreads.com/book/show/25530718-the-ultimate-sales-machine)
+* [Being Wrong: Adventures in the Margin of Error](https://www.goodreads.com/book/show/7811050-being-wrong)
+* [The Hidden Power of Social Networks: Understanding How Work Really Gets Done in Organizations](https://www.goodreads.com/book/show/14726.The_Hidden_Power_of_Social_Networks)
 
 ## Blog Posts/Articles
 
@@ -43,6 +48,7 @@ A couple days ago I posted a tweet asking the twitterverse for suggestions on us
   * [HBR IdeaCast](https://hbr.org/podcasts/ideacast)
   * [Women at Work](https://hbr.org/podcasts/women-at-work)
   * [Dear HBR](https://hbr.org/podcasts/dear-hbr)
+* [Battle Tactics For Your Sexist Workplace](https://twitter.com/BTSWpodcast)
 
 
 
@@ -53,3 +59,9 @@ A couple days ago I posted a tweet asking the twitterverse for suggestions on us
 
 [@jbrains](https://twitter.com/jbrains)
 > When I first took this role, I learned the hard way that I could no longer take responsibility for delivering specific tasks, and especially no task where the cost of delay is high. I focused on staying responsive to the group and doing little things to get them out of the way.
+
+[@StephRCampos](https://twitter.com/StephRCampos)
+> Meet people where they are - the type of leadership people need is different for everyone so be empathetic to this while steering the ship.✌🏼
+
+[@tw0handt0uch1](https://twitter.com/tw0handt0uch1)
+> 1:1’s are sacred and should never be rescheduled/cancelled.
