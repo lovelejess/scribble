@@ -1,5 +1,5 @@
 ---
-title: "iOS - enums"
+title: "swift - enums"
 date: 2020-02-01 10:47:30
 ---
 
