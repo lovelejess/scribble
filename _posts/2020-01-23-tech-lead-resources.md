@@ -7,7 +7,7 @@ A couple days ago I posted a tweet asking the twitterverse for suggestions on us
 
 ## Books
 
-* [Resilient Management by by Lara Hogan](https://www.goodreads.com/book/show/45767533-resilient-management)
+* [Resilient Management by Lara Hogan](https://www.goodreads.com/book/show/45767533-resilient-management)
 * [Becoming a Technical Leader: An Organic Problem-Solving Approach by Gerald M. Weinberg](https://www.goodreads.com/book/show/714344.Becoming_a_Technical_Leader)
 * [High Output Management by Andrew S. Grove ](https://www.goodreads.com/book/show/324750.High_Output_Management)
 * [Radical Candor by Kim Scott](https://www.goodreads.com/book/show/29939161-radical-candor)
@@ -26,6 +26,7 @@ A couple days ago I posted a tweet asking the twitterverse for suggestions on us
 * [The Ultimate Sales Machine](https://www.goodreads.com/book/show/25530718-the-ultimate-sales-machine)
 * [Being Wrong: Adventures in the Margin of Error](https://www.goodreads.com/book/show/7811050-being-wrong)
 * [The Hidden Power of Social Networks: Understanding How Work Really Gets Done in Organizations](https://www.goodreads.com/book/show/14726.The_Hidden_Power_of_Social_Networks)
+* [15 Commitments of Conscious Leadership](https://www.goodreads.com/en/book/show/23275060)
 
 ## Blog Posts/Articles
 
