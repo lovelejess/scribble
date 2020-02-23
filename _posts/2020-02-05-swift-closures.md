@@ -79,8 +79,11 @@ incrementMe() // returns 3
 An **escaping closure** outlives the function it was passed to. Therefore the closure is executed *after* the function it was passed to returns.
     * The risk of this are **retain cycles** since the closure can outlive the function and maintain a reference to variables within the closure.
     * Any reference to self within a closure should be a reference to `unowned self` or `weak self` to prevent a reference cycle.
+
 A **non-escaping closure** is a closure that’s called within the function it was passed into. Therefore the close is executed before the function returns.
     * A non-escaping closure can’t create a retain cycle, because all variables it references from the context it was created in will be removed after the closure completes execution.
+
+ **Example of Escaping Closure**
 
     class func requestImageFile(url: URL, completionHandler: @escaping (UIImage?, Error?) -> Void) {
 
@@ -89,7 +92,9 @@ A **non-escaping closure** is a closure that’s called within the function it w
          completionHandler(image, nil)
     }
 
-    class func requestImageFile(url: URL, completionHandler:(UIImage?, Error?) -> Void) {
+**Example of Non-Escaping Closure**
+
+    class func requestImageFile(url: URL, completionHandler: (UIImage?, Error?) -> Void) {
 
         // do stuff
         // then execute the completion handler/ closure

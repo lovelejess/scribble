@@ -190,3 +190,44 @@ What if the JSON contains nested fields? No Problem! Swifth handles it as well! 
     } catch {
         print(error)
     }
+
+### Generic Function for GET Requests
+
+    class func taskForGETRequest<ResponseType: Codable>(url: URL, responseType: ResponseType.Type, completion: @escaping (ResponseType?, Error?) -> Void) {
+        let task = URLSession.shared.dataTask(with: url) { data, response, error in
+            guard let data = data else {
+                DispatchQueue.main.async {
+                    completion(nil, error)
+                }
+                return
+            }
+            let decoder = JSONDecoder()
+            do {
+                let responseObject = try decoder.decode(ResponseType.self, from: data)
+                DispatchQueue.main.async {
+                    completion(responseObject, error)
+                }
+            } catch {
+                DispatchQueue.main.async {
+                    completion(nil, error)
+                }
+            }
+        }
+        task.resume()
+    }
+
+
+#### Example
+
+    Here's an example of how one would call the above method:
+
+    class func getFavorites(completion: @escaping ([Movie], Error?) -> Void) {
+        taskForGETRequest(url: Endpoints.getFavorites.url, responseType: MovieResults.self) { (response, error) in
+            if let response = response {
+                completion(response.results, nil)
+            }
+            else {
+                completion([], error)
+            }
+        }
+    }
