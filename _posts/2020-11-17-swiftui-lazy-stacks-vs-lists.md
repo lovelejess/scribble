@@ -5,6 +5,8 @@ date: 2020-11-17 21:57:11
 
 Notes from [Ray Wenderlich's Swift UI - Layout Interfaces](https://www.raywenderlich.com/17314449-swiftui-layout-interfaces/lessons/2)
 
+Hacking with Swift has a great [article](https://www.hackingwithswift.com/quick-start/swiftui/how-to-lazy-load-views-using-lazyvstack-and-lazyhstack) as well
+
 ### Lists 
  
 * Similar to `UITableView` and `UITableViewCell` in UIKit
