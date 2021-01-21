@@ -1,6 +1,6 @@
 ---
 title: "swiftui - webview wrapper"
-date: 2020-01-16 10:57:14
+date: 2021-01-16 10:57:14
 ---
 
 ### How to Create a WebView in SwiftUI
