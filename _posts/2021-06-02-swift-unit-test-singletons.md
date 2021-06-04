@@ -85,28 +85,27 @@ enum Animal: String {
 
 ```
 class FakeSingleton: SingletonProtocol {
-    func doesSomethingEpic(with parameter: String) -> String {
-        let epicness = parameter
-        print(epicness)
-        return epicness
+    func run(with parameter: String) -> String {
+        return parameter
     }
-        
+
 }
 
 /// Tests`SingletonConsumer`
-class SingletonConsumerTests: XCTestCase {
-    func test_doSomethingCoolWithNonMatchingEpicnessValues_setsEpicValueTo_NotEpicYet() {
+class SingletonExampleTests: XCTestCase {
+    
+
+    func test_doSomethingCoolWithNonMatchingAnimalValues_setsAnimal_nil() {
         let singletonConsumer = SingletonConsumer(singleton: FakeSingleton())
         singletonConsumer.doSomethingCool(with: "spiders")
-        let actual = singletonConsumer.epicValue
-        let expected = "not epic yet"
-        XCTAssertEqual(actual, expected)
+        let actual = singletonConsumer.animal
+        XCTAssertNil(actual)
     }
     
-    func test_doSomethingCoolWithCats_setsEpicValueToCats() {
+    func test_doSomethingCoolWithCats_setsAnimalToCats() {
         let singletonConsumer = SingletonConsumer(singleton: FakeSingleton())
         singletonConsumer.doSomethingCool(with: "cats")
-        let actual = singletonConsumer.epicValue
+        let actual = singletonConsumer.animal
         let expected = Animal.cats.rawValue
         XCTAssertEqual(actual, expected)
     }
