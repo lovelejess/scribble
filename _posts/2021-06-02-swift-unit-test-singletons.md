@@ -5,6 +5,10 @@ date: 2021-06-02 21:25:30
 
 ### How to Unit Test Singletons
 
+* Sure singletons are an anti-pattern and not usually recommended, but sometimes we have a dependency on a singleton (e.g. Firebase). Therefore we need a way to unit test it, so this blog shows you how to do so!
+
+* Link to [repo](https://github.com/lovelejess/SwiftSingletonUnitTestExample)
+
 ```
 /// This is an example of a singleton that's a black box.
 /// Pretend it comes from a third party library and we have no insight into what it does
